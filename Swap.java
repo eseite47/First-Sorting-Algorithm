@@ -18,7 +18,7 @@ class Swap
       			//check if the value needs to go right
       			if (value % 2 == 0)
       			{
-        			//check value to the right
+        			//check value to the left
         			for (int a = i; a < array.length; a++)
         			{
           				int next = array[a];
