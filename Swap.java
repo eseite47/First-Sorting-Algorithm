@@ -19,24 +19,22 @@ class Swap
       			if (value % 2 == 0)
       			{
         			//check value to the right
-        			for (int a = i; a < array.length; a++)
+        			for (int a = i; a < array.length -1; a++)
         			{
           				int next = array[a];
           
           				// if it is odd, swap right
           				if (next % 2 == 1)
           				{
-              					int swap = next;
               					array[a] = value;
-              					array[i] = swap;
+              					array[i] = next;
           				}
           
           				// else if is bigger, swap right
          				else if (value < next)
           				{
-              					int swap = next;
               					array[a] = value;
-              					array[i] = swap;
+              					array[i] = next;
           				}
         			}
       			}
@@ -44,24 +42,22 @@ class Swap
       			else
 			{
         			//check value to the left
-        			for (int a = i; a >= 0; a--)
+        			for (int a = i; a > 0; a--)
         			{
          				int next = array[a];
           
           				// if it is even, swap left
           				if (next % 2 == 0)
           				{
-             					int swap = next;
               					array[a] = value;
-              					array[i] = swap;
+              					array[i] = next;
           				
           
           				// else if is bigger, swap left
           				else if (value < next)
           				{
-              					int swap = next;
               					array[a] = value;
-              					array[i] = swap;
+              					array[i] = next;
           				}
         			}
       			}
