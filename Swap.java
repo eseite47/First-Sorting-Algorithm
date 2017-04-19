@@ -48,7 +48,7 @@ class Swap
         			{
          				int next = array[a];
           
-          				// if it is even, swap right
+          				// if it is even, swap left
           				if (next % 2 == 0)
           				{
              					int swap = next;
@@ -56,7 +56,7 @@ class Swap
               					array[i] = swap;
           				
           
-          				// else if is bigger, swap right
+          				// else if is bigger, swap left
           				else if (value < next)
           				{
               					int swap = next;
