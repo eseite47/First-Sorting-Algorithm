@@ -33,21 +33,27 @@ class SwapTwo
 	
 		for (int i = 0; i < odd.length-1; i++)
 		{
-			if (odd[i]>odd[i+1])
+			for (int j = i+1; j < odd.length; j++)
 			{
-				int temp = odd[i+1];
-				odd[i+1] = odd[i];
+				if (odd[i]>odd[j])
+				{
+				int temp = odd[j];
+				odd[j] = odd[i];
 				odd[i] = temp;
+				}
 			}
 		}
 
 		for (int i = 0; i < even.length-1; i++)
 		{
-			if (even[i]<even[i+1])
+			for (int j = i+1; j <even.length; j++)
 			{
-				int temp = even[i+1];
-				even[i+1] = even[i];
+				if (even[i]<even[j])
+				{
+				int temp = even[j];
+				even[j] = even[i];
 				even[i] = temp;
+				}
 			}
 		}
 	}
